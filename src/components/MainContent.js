@@ -8,7 +8,7 @@ import jokesData from '../data/jokesData';
 
 const MainContent = () => {
     const theJokes = jokesData.map(joke => {
-        return <Joke q={ joke.q } a={ joke.a } />
+        return <Joke joke={ joke } />
     });
 
     return (
