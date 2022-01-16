@@ -9,5 +9,20 @@ body {
     margin: 0;
 }
 
+header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgrey;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
 code {
 }

@@ -1,8 +1,5 @@
 import React from "react";
 
-// Components
-import Nav from './Nav';
-
 // Images 
 import logo from '../images/logo.svg';
 
@@ -10,7 +7,12 @@ const Header = () => {
     return (
         <header>
             <img src={ logo } alt="logo" width="100px" />
-            <Nav />
+            <nav>
+                <li>Home</li>
+                <li>Blog</li>
+                <li>About</li>
+                <li>Contact</li>
+            </nav>
         </header>
     );
 }
