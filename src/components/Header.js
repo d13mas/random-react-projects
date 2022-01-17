@@ -6,12 +6,14 @@ import logo from '../images/logo.svg';
 const Header = () => {
     return (
         <header>
-            <img src={ logo } alt="logo" width="100px" />
+            <h1><img src={logo} alt="logo" width="100px" />Random React Apps</h1>
             <nav>
-                <li>Home</li>
-                <li>Blog</li>
-                <li>About</li>
-                <li>Contact</li>
+                <ul>
+                    <li>Home</li>
+                    <li>Blog</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
             </nav>
         </header>
     );

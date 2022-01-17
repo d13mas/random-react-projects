@@ -1,12 +1,9 @@
 import React from "react";
 
-// Images 
-import logo from '../images/logo.svg';
-
 const Footer = () => {
     return (
         <footer>
-            <img src={ logo } alt="logo" width="100px" />
+            2022 - For Educational Purposes Only
         </footer>
     );
 }

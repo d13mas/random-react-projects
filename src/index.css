@@ -1,4 +1,12 @@
 :root {
+    --heading-font: 'Barlow Semi Condensed', sans-serif;
+    --body-font: 'Barlow Semi Condensed', sans-serif;
+    --body-font-size: 16px;
+    --menu-font-size: 20px;
+    --darkGrey: #494949;
+    --lightGrey: #ccc;
+    --white: #fff;
+    --reactColor: #61dafb;
 }
 
 * {
@@ -7,22 +15,42 @@
 
 body {
     margin: 0;
+    font-family: var(--body-font);
 }
 
 header {
     padding: 30px;
     display: flex;
     justify-content: space-between;
-    background-color: lightgrey;
+    align-items: center;
+    background-color: var(--darkGrey);
 }
 
-nav {
+header h1 {
+    color: var(--reactColor);
     display: flex;
+    align-items: center;
 }
 
 nav ul {
+    display: flex;
+    align-items: center;
     list-style-type: none;
+    color: var(--white);
+    font-size: var(--menu-font-size);
 }
 
-code {
+nav ul li {
+    margin-right: 20px;
+}
+
+.main {
+    padding: 30px;
+}
+
+footer {
+    margin: 30px;
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid var(--lightGrey);
 }
