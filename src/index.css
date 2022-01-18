@@ -54,3 +54,11 @@ footer {
     text-align: center;
     border-top: 1px solid var(--lightGrey);
 }
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--darkGrey);
+    display: inline-block;
+    margin-right: 4px;
+}

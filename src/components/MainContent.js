@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 import Joke from './Joke';
+import Boxes from './Boxes'
 
 // Data
 import jokesData from '../data/jokesData';
@@ -13,6 +14,7 @@ const MainContent = () => {
 
     return (
         <div className="main">
+            <Boxes />
             {theJokes}
         </div>
     );
