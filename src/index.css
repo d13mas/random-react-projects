@@ -1,3 +1,4 @@
+/* generic styles */
 :root {
     --heading-font: 'Barlow Semi Condensed', sans-serif;
     --body-font: 'Barlow Semi Condensed', sans-serif;
@@ -18,6 +19,12 @@ body {
     font-family: var(--body-font);
 }
 
+.material-icons {
+    cursor: pointer;
+    color: var(--darkGrey);
+}
+
+/* header */
 header {
     padding: 30px;
     display: flex;
@@ -44,10 +51,18 @@ nav ul li {
     margin-right: 20px;
 }
 
+/* main content */
 .main {
     padding: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
+.react--app {
+    width: 48%;
+}
+
+/* footer */
 footer {
     margin: 30px;
     padding: 30px;
@@ -55,6 +70,22 @@ footer {
     border-top: 1px solid var(--lightGrey);
 }
 
+/* jokes app */
+.votes {
+    display: flex;
+    width: 20%;
+    align-items: center;
+}
+
+.votes span {
+    padding: 10px;
+}
+
+.votes span:last-child {
+    font-size: 25px;
+}
+
+/* boxes app */
 .box {
     width: 100px;
     height: 100px;

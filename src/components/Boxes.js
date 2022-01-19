@@ -6,14 +6,22 @@ import Box from './Box'
 const Boxes = (props) => {
     const [boxes, setBoxes] = useState(boxesData)
 
-    // function handleClick() {
-    //     setBoxes(prevBoxes =>
-    //         (...prevBoxes)
-    //         prevBoxes.on = !prevBoxes.on)
-    // }
+    function handleClick(miid) {
+        setBoxes(prevBoxes => {
+            return prevBoxes.map((box) => {
+                return box.id === miid ? {...box, on: !box.on} : {...box}
+            })
+        })
+        
+    }
 
     const squareElements = boxes.map(box => (
-        <Box box={box} />
+        <Box
+            boxClicked={handleClick}
+            key={box.id} 
+            id={box.id} 
+            box={box}
+            />
     ))
 
     return (

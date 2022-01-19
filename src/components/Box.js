@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Box = (props) => {
-    const [ison, setIson] = useState(props.box.on)
-
-    function handleClick() {
-        setIson(prevIson => !prevIson)
+    const styles = {
+        backgroundColor: props.box.on ? "#222222" : "#FFFFFF"
     }
 
     return (
-        <div onClick={ handleClick } style={{ backgroundColor: ison ? "#222" : "#e1e1e1" }} className="box" key={props.box.id}></div>
+        <div
+            className="box"
+            onClick={() => props.boxClicked(props.id)}
+            style={styles}
+        ></div>
     )
 }
 

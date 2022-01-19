@@ -1,38 +1,16 @@
-import React, { useState } from "react";
-
-// Img
-import check from '../images/check.png';
+import React from "react";
 
 const Joke = (props) => {
-    const [jokeVotes, setVote] = useState(0)
-    const [selectJoke, setSelectJoke] = useState(props.joke.fav)
-    
-    function handleClickPlus() {
-        setVote(prevVotes => prevVotes + 1);
-    }
-
-    function handleClickRest() {
-        setVote(prevVotes => prevVotes - 1);
-    }
-
-    function handleSelectJoke() {
-        setSelectJoke(prevSelection => !prevSelection)
-    }
 
     return (
         <div>
-            {props.joke.q && <h3>Setup: {props.joke.q}</h3>}
+            {props.joke.q && <h4>Question: {props.joke.q}</h4>}
             <p>Punchline: {props.joke.a}</p>
-            <div>
-                <button onClick={handleClickPlus}>UP VOTE</button>
-                <button onClick={handleClickRest}>DOWN VOTE</button>
-                <span>{jokeVotes}</span>
+            <div className="votes">
+                <span onClick={props.handleClickPlus} className="material-icons">thumb_up</span>
+                <span onClick={props.handleClickRest} className="material-icons">thumb_down</span>
+                <span>{props.joke.votes}</span>
             </div>
-            <div>
-                <button onClick={handleSelectJoke}>Like</button>
-                {selectJoke ? <img src={check} alt="check" width="20px" /> : ''}
-            </div>
-            <hr />
         </div>
     )
 }
