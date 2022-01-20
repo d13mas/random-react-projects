@@ -12,7 +12,7 @@ const Apidata = (props) => {
 
     return (
         <div>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
+            <pre>Data: {JSON.stringify(data, null, 2)}</pre>
         </div>
     )
 }
