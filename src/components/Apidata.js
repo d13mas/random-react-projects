@@ -12,7 +12,11 @@ const Apidata = (props) => {
 
     return (
         <div>
-            <pre>Data: {JSON.stringify(data, null, 2)}</pre>
+            <h4>NASA picture of the day :: { data.title }</h4>
+            <p>{data.explanation}</p>
+            <img src={data.url} alt="NASA" width="600px" />
+            <pre>&copy; { data.copyright }</pre>
+            <pre>{JSON.stringify(data, null, 2)}</pre>
         </div>
     )
 }

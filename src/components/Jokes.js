@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import jokesData from '../data/jokesData'
 import Joke from './Joke'
 
-const Jokes = () => {
+const Jokes = (props) => {
     const [thejokes, setThejokes] = useState(jokesData)
 
     function handleClickPlus(theid) {
@@ -34,7 +34,7 @@ const Jokes = () => {
     ))
 
     return (
-        <div className='jokes'>
+        <div className={`jokes ${props.mode}`}>
             {jokesElements}
         </div>
     )

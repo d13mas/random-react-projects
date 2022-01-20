@@ -1,8 +1,8 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = (props) => {
     return (
-        <footer>
+        <footer className={ props.mode }>
             2022 - For Educational Purposes Only
         </footer>
     );
