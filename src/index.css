@@ -56,10 +56,13 @@ nav ul li {
     padding: 30px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .react--app {
     width: 48%;
+    flex: 1 0 40%;
+    margin: 0 15px 15px;
 }
 
 /* footer */
@@ -92,4 +95,35 @@ footer {
     border: 1px solid var(--darkGrey);
     display: inline-block;
     margin-right: 4px;
+}
+
+/* forms app */
+input[type='text'],
+input[type='email'] {
+    margin-bottom: 15px;
+    height: 30px;
+    text-indent: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: block;
+    width: 250px;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    margin-right: 0.75rem;
+    margin-bottom: 15px;
+}
+
+textarea {
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: block;
+    width: 250px;
+    height: 100px;
+}
+
+fieldset {
+    width: 250px;
 }

@@ -8,9 +8,10 @@ const Jokes = () => {
 
     function handleClickPlus(theid) {
         setThejokes(prevThejokes => {
-            return prevThejokes.map((joke, idx) => {
+            return prevThejokes
+                .map((joke, idx) => {
                 return idx === theid ? {...joke, votes: joke.votes + 1} : joke
-            })
+                })
         });
         console.log(theid)
     }
