@@ -35,13 +35,13 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: $--dark-mode-BG;
+    h1 {
+        color: $--reactColor;
+        display: flex;
+        align-items: center;
+    }
 }
 
-header h1 {
-    color: $--reactColor;
-    display: flex;
-    align-items: center;
-}
 
 nav ul {
     display: flex;
@@ -49,10 +49,9 @@ nav ul {
     list-style-type: none;
     color: $--dark-mode-Font;
     font-size: $--menu-font-size;
-}
-
-nav ul li {
-    margin-right: 10px;
+    li {
+        margin-right: 10px;
+    }
 }
 
 /* main content */
@@ -63,7 +62,7 @@ nav ul li {
     flex-wrap: wrap;
 }
 
-.react$--app {
+.react--app {
     width: 48%;
     flex: 1 0 40%;
     margin: 0 15px 15px;
@@ -82,14 +81,13 @@ footer {
     display: flex;
     width: 20%;
     align-items: center;
-}
-
-.votes span {
-    padding: 10px;
-}
-
-.votes span:last-child {
-    font-size: 25px;
+    span {
+        padding: 10px;
+    }
+    
+    span:last-child {
+        font-size: 25px;
+    }
 }
 
 /* boxes app */
