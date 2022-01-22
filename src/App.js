@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import MainContent from './components/MainContent';
 
 // Styles
-import './index.css';
+import './index.scss';
 
 // Main 
 function App() {
