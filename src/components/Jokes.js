@@ -3,10 +3,10 @@ import React, { useState } from 'react'
 import jokesData from '../data/jokesData'
 import Joke from './Joke'
 
-const Jokes = (props) => {
+const Jokes = ({mode}) => {
     const [thejokes, setThejokes] = useState(jokesData)
 
-    function handleClickPlus(theid) {
+    const handleClickPlus = (theid) => {
         setThejokes(prevThejokes => {
             return prevThejokes
                 .map((joke, idx) => {
@@ -16,7 +16,7 @@ const Jokes = (props) => {
         console.log(theid)
     }
 
-    function handleClickRest(theid) {
+    const handleClickRest = (theid) => {
         setThejokes(prevThejokes => {
             return prevThejokes.map((joke, idx) => {
                 return idx === theid ? { ...joke, votes: joke.votes - 1 } : joke
@@ -34,7 +34,7 @@ const Jokes = (props) => {
     ))
 
     return (
-        <div className={`jokes ${props.mode}`}>
+        <div className={`jokes ${mode}`}>
             {jokesElements}
         </div>
     )

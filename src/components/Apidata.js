@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Apidata = (props) => {
+const Apidata = () => {
     const [data, setData] = useState("")
 
     useEffect(() => {

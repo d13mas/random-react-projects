@@ -3,16 +3,15 @@ import React, { useState } from "react";
 import boxesData from '../data/boxes'
 import Box from './Box'
 
-const Boxes = (props) => {
+const Boxes = () => {
     const [boxes, setBoxes] = useState(boxesData)
 
-    function handleClick(miid) {
+    const handleClick = (miid) => {
         setBoxes(prevBoxes => {
             return prevBoxes.map((box) => {
                 return box.id === miid ? {...box, on: !box.on} : {...box}
             })
         })
-        
     }
 
     const squareElements = boxes.map(box => (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Forms = (props) => {
+const Forms = () => {
     const [fields, setFields] = useState({
         firstName: "",
         lastName: "",
@@ -11,7 +11,7 @@ const Forms = (props) => {
         selection: ""
     })
 
-    function handleChange(e) {
+    const handleChange = (e) => {
         const {name, value, type, checked} = e.target
 
         setFields(prevFields => {
@@ -22,13 +22,15 @@ const Forms = (props) => {
         })
     }
 
-    function handleSubmit(e) {
+    const handleSubmit = (e) => {
         e.preventDefault()
         console.log(fields)
     }
+
     const styles = {
         display: "flex"
     }
+
     return (
         <div style={ styles }>
             <form onSubmit={handleSubmit}>

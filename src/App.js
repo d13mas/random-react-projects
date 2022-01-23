@@ -9,10 +9,10 @@ import MainContent from './components/MainContent';
 import './index.scss';
 
 // Main 
-function App() {
+const App = () => {
   const [mode, setMode] = useState("toggle_off")
 
-  function handlerMode() {
+  const handlerMode = () => {
     setMode((prevMode) => prevMode === "toggle_off" ? "toggle_on" : "toggle_off")
   }
 
