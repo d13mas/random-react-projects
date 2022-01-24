@@ -58,8 +58,13 @@ nav ul {
 .main {
     padding: 30px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+h2 {
+    clear: both;
+    width: 100%;
+    text-align: center;
 }
 
 .react--app {
@@ -97,6 +102,10 @@ footer {
     border: 1px solid $--dark-mode-BG;
     display: inline-block;
     margin-right: 4px;
+}
+
+.box.toggle_on {
+    border: 1px solid $--dark-mode-Font;
 }
 
 /* forms app */

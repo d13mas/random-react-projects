@@ -1,33 +1,24 @@
 import React from "react";
+import { Route, Routes } from 'react-router-dom';
 
-// Components
-import Jokes from './Jokes';
-import Boxes from './Boxes'
-import Forms from './Forms'
-import Apidata from './Apidata'
+// Pages
+import HomeP from '../pages/HomeP';
+import JokesP from '../pages/JokesP';
+import BoxesP from '../pages/BoxesP';
+import FormsP from '../pages/FormP';
+import ApicallP from '../pages/ApicallP';
+import NotFoundP from '../pages/NotFoundP';
 
-const MainContent = ({mode}) => (
+const MainContent = ({ mode }) => (
     <div className={`main ${mode}`}>
-        <div className="react--app">
-            <h2>The Jokes App</h2>
-            <p>Jokes JSON is rendered so users can vote, in the near future the list will get reordered based on the total score.</p>
-            <Jokes mode={ mode } />
-        </div>
-        <div className="react--app">
-            <h2>The API Call App</h2>
-            <p>Getting data from APIs</p>
-            <Apidata mode={ mode } />
-        </div>
-        <div className="react--app">
-            <h2>The Boxes App</h2>
-            <p>Boxes definition from a JSON. Currently a toggler of state, a Simon game in the near future.</p>
-            <Boxes mode={ mode } />
-        </div>
-        <div className="react--app">
-            <h2>The Form App</h2>
-            <p>Quick example on forms and controlled components</p>
-            <Forms mode={ mode } />
-        </div>
+        <Routes>
+            <Route path="/" element={<HomeP />} exact />
+            <Route path="/jokes" element={<JokesP />} />
+            <Route path="/api-call" element={<ApicallP />} />
+            <Route path="/boxes" element={<BoxesP mode={ mode } />} />
+            <Route path="/form" element={<FormsP />} />
+            <Route element={<NotFoundP />} />
+        </Routes>
     </div>
 )
 

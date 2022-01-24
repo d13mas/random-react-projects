@@ -7,7 +7,7 @@ const Box = props => {
 
     return (
         <div
-            className="box"
+            className={`box ${props.mode}`}
             onClick={() => props.boxClicked(props.id)}
             style={styles}
         ></div>

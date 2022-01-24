@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import boxesData from '../data/boxes'
 import Box from './Box'
 
-const Boxes = () => {
+const Boxes = ({mode}) => {
     const [boxes, setBoxes] = useState(boxesData)
 
     const handleClick = (miid) => {
@@ -20,6 +20,7 @@ const Boxes = () => {
             key={box.id} 
             id={box.id} 
             box={box}
+            mode={mode}
             />
     ))
 

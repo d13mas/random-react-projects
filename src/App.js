@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 // Components
 import Header from './components/Header';
@@ -7,6 +8,7 @@ import MainContent from './components/MainContent';
 
 // Styles
 import './index.scss';
+
 
 // Main 
 const App = () => {
@@ -17,15 +19,17 @@ const App = () => {
   }
 
   return (
-    <div className={`App ${mode}`}>
-      <Header
-        onClick={handlerMode}
-        mode={mode}
-      />
-      <MainContent mode={mode} />
-      <Footer mode={mode} />
-    </div>
-  );
+    <BrowserRouter>
+      <div className={`App ${mode}`}>
+        <Header
+          onClick={handlerMode}
+          mode={mode}
+        />
+        <MainContent mode={mode} />
+        <Footer mode={mode} />
+      </div>
+    </BrowserRouter>
+  ); 
 }
 
 export default App;
